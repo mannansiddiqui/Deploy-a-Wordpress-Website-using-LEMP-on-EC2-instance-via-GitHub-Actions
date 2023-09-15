@@ -33,10 +33,6 @@ To update apt repository run ```sudo apt update``` and to check the ufw status r
 
 ![image](https://github.com/mannansiddiqui/Deploy-a-Wordpress-Website-using-LEMP-on-EC2-instance-via-GitHub-Actions/assets/74168188/52c88a74-f7aa-4d1c-b473-17f4f57d438a)
 
-Add a firewall rule to allow port 80 and 443 using ```sudo ufw allow 80/tcp``` and ```sudo ufw allow 443/tcp``` Also, enable the ufw firewall by running ```sudo ufw enable``` then reload the ufw by running ```sudo ufw reload```
-
-![image](https://github.com/mannansiddiqui/Deploy-a-Wordpress-Website-using-LEMP-on-EC2-instance-via-GitHub-Actions/assets/74168188/18b803ad-7233-4495-a65e-3c0328679f57)
-
 #### Step-3: Install and configure Nginx as the web server, MySQL as the database, and PHP for processing dynamic content.
 
 Installing Nginx on Ubuntu 22.04 using ```sudo apt install nginx -y```
@@ -45,9 +41,14 @@ Installing Nginx on Ubuntu 22.04 using ```sudo apt install nginx -y```
 
 ![image](https://github.com/mannansiddiqui/Deploy-a-Wordpress-Website-using-LEMP-on-EC2-instance-via-GitHub-Actions/assets/74168188/9c3870f0-6105-4038-a3ae-cfbfc42a15b5)
 
+First, list all the available application profiles using ```sudo ufw app list``` then create a firewall rule to allow application profiles i.e. Nginx Full and OpenSSH using ```sudo ufw allow "Nginx Full"``` and ```sudo ufw allow OpenSSH```
+
+![Screenshot from 2023-09-15 07-26-01](https://github.com/mannansiddiqui/Deploy-a-Wordpress-Website-using-LEMP-on-EC2-instance-via-GitHub-Actions/assets/74168188/1d0ce7ac-c0de-4883-b5c0-91ef45b39dbc)
+
 Install Mysql server using ```sudo apt install mysql-server -y```
 
 ![image](https://github.com/mannansiddiqui/Deploy-a-Wordpress-Website-using-LEMP-on-EC2-instance-via-GitHub-Actions/assets/74168188/a7207a1e-a44e-45f4-abb4-65994e3bd8fb)
 
 ![image](https://github.com/mannansiddiqui/Deploy-a-Wordpress-Website-using-LEMP-on-EC2-instance-via-GitHub-Actions/assets/74168188/cf90271e-a99e-49d3-878f-467e0cceed83)
 
+Install php extensions
