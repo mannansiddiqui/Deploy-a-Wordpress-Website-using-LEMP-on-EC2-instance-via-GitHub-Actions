@@ -38,4 +38,4 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no $SSH_USER@$SERVER_IP 'sudo mkdir -p /var/www/${{ github.run_number }}'
           rsync -avz -e "ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa" . $SSH_USER@$SERVER_IP:/home/ubuntu/${{ github.run_number }}
-          ssh -o StrictHostKeyChecking=no $SSH_USER@$SERVER_IP 'sudo unlink /var/www/wordpress && sudo ln -s /home/ubuntu/${{ github.run_number }} /var/www/wordpress && cp -p /var/www/wordpress-bak/wp-config.php /var/www/wordpress && chown -R www-data:www-data /var/www/wordpress'
+          ssh -o StrictHostKeyChecking=no $SSH_USER@$SERVER_IP 'sudo unlink /var/www/wordpress && sudo ln -s /home/ubuntu/${{ github.run_number }} /var/www/wordpress && cp -p /var/www/wordpress-bak/wp-config.php /var/www/wordpress && sudo chown -R www-data:www-data /var/www/wordpress'
