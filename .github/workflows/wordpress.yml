@@ -30,5 +30,4 @@ jobs:
 
       - name: Deploy to VPS
         run: |
-          ec
           ssh -o StrictHostKeyChecking=no $SSH_USER@$SERVER_IP 'cd /var/www && sudo mkdir {{ env.GITHUB_RUN_NUMBER }}'
