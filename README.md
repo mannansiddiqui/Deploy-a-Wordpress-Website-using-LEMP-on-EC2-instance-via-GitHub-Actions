@@ -41,7 +41,7 @@ Installing Nginx on Ubuntu 22.04 using ```sudo apt install nginx -y```
 
 ![image](https://github.com/mannansiddiqui/Deploy-a-Wordpress-Website-using-LEMP-on-EC2-instance-via-GitHub-Actions/assets/74168188/9c3870f0-6105-4038-a3ae-cfbfc42a15b5)
 
-First, list all the available application profiles using ```sudo ufw app list``` then create a firewall rule to allow application profiles i.e. Nginx Full and OpenSSH using ```sudo ufw allow "Nginx Full"``` and ```sudo ufw allow OpenSSH```
+First, list all the available application profiles using ```sudo ufw app list``` then create a firewall rule to allow application profiles i.e. Nginx Full and OpenSSH using ```sudo ufw allow "Nginx Full"``` and ```sudo ufw allow OpenSSH```. Then, enable ufw using ```sudo ufw enable```
 
 ![Screenshot from 2023-09-15 07-26-01](https://github.com/mannansiddiqui/Deploy-a-Wordpress-Website-using-LEMP-on-EC2-instance-via-GitHub-Actions/assets/74168188/1d0ce7ac-c0de-4883-b5c0-91ef45b39dbc)
 
@@ -51,4 +51,8 @@ Install Mysql server using ```sudo apt install mysql-server -y```
 
 ![image](https://github.com/mannansiddiqui/Deploy-a-Wordpress-Website-using-LEMP-on-EC2-instance-via-GitHub-Actions/assets/74168188/cf90271e-a99e-49d3-878f-467e0cceed83)
 
-Install php extensions
+Let's configure MySQL
+
+![image](https://github.com/mannansiddiqui/Deploy-a-Wordpress-Website-using-LEMP-on-EC2-instance-via-GitHub-Actions/assets/74168188/afdc3187-5a6d-4a83-a4b7-8be1b0a1a52e)
+
+![image](https://github.com/mannansiddiqui/Deploy-a-Wordpress-Website-using-LEMP-on-EC2-instance-via-GitHub-Actions/assets/74168188/1c9c2ae5-e1e2-45fa-8eba-2258b2368047)
