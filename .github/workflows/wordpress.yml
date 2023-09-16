@@ -22,6 +22,13 @@ jobs:
         run: |
           # npm run build
 
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+
       - name: Deploy to VPS
         run: |
-          ssh -o StrictHostKeyChecking=no -i $SSH_PRIVATE_KEY $SSH_USER@$SERVER_IP 'cd /var/www && sudo mkdir {{ env.GITHUB_RUN_NUMBER }}'
+          ec
+          ssh -o StrictHostKeyChecking=no $SSH_USER@$SERVER_IP 'cd /var/www && sudo mkdir {{ env.GITHUB_RUN_NUMBER }}'
