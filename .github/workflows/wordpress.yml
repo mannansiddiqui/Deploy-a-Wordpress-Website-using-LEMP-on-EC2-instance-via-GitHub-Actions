@@ -36,6 +36,6 @@ jobs:
 
       - name: Deploy to VPS
         run: |
-          ssh -o StrictHostKeyChecking=no $SSH_USER@$SERVER_IP 'cd /var/www && sudo mkdir ${{ github.run_number }}'
-          pwd
-          ls -la
+          ssh -o StrictHostKeyChecking=no $SSH_USER@$SERVER_IP 'sudo mkdir /var/www/${{ github.run_number }}'
+          rsync -e (ssh -o StrictHostKeyChecking=no $SSH_USER@$SERVER_IP) . /var/www/${{ github.run_number }}
+          ssh -o StrictHostKeyChecking=no $SSH_USER@$SERVER_IP 'sudo unlink /var/www/wordpress && sudo ln -s /var/www/${{ github.run_number }} /var/www/wordpress'
