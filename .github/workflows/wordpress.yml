@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+env:
+  SSH_USER: ${{ env.SSH_USER }}
+  SERVER_IP: ${{ env.SERVER_IP }}
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -32,7 +36,7 @@ jobs:
 
       - name: Deploy to VPS
         run: |
-          echo "${{ env.SSH_USER }}"
-          echo "${{ env.SERVER_IP }}"
+          echo "$SSH_USER"
+          echo "$SERVER_IP"
           echo "${{ github.run_number }}"
-          ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa ${{ env.SSH_USER }}@${{ env.SERVER_IP }} 'cd /var/www && sudo mkdir ${{ env.GITHUB_RUN_NUMBER }}'
+          ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa $SSH_USER@$SERVER_IP 'cd /var/www && sudo mkdir ${{ env.GITHUB_RUN_NUMBER }}'
