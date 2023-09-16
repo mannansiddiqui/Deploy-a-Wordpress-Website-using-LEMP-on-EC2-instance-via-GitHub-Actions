@@ -137,3 +137,16 @@ After this reload the nginx using ```sudo systemctl reload nginx.service```
 
 #### Step-7: Set up a GitHub Actions workflow for the automated deployment of the WordPress website to the VPS.
 
+Now, let's create a GitHub actions workflow
+
+![image](https://github.com/mannansiddiqui/Deploy-a-Wordpress-Website-using-LEMP-on-EC2-instance-via-GitHub-Actions/assets/74168188/19e9018c-ecb2-4e8f-963a-2e5669542682)
+
+![image](https://github.com/mannansiddiqui/Deploy-a-Wordpress-Website-using-LEMP-on-EC2-instance-via-GitHub-Actions/assets/74168188/06d35c10-8f5b-4384-adaa-5ce00e852de0)
+
+Let's hit the URL again to test
+
+![image](https://github.com/mannansiddiqui/Deploy-a-Wordpress-Website-using-LEMP-on-EC2-instance-via-GitHub-Actions/assets/74168188/b6138623-a042-41ec-a67b-6653969000fa)
+
+We are able to access it
+
+THANK YOU...
