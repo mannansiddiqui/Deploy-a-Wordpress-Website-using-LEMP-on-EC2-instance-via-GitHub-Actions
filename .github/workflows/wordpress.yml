@@ -36,7 +36,6 @@ jobs:
 
       - name: Deploy to VPS
         run: |
-          echo "$SSH_USER"
-          echo "$SERVER_IP"
-          echo "${{ github.run_number }}"
-          ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa $SSH_USER@$SERVER_IP 'cd /var/www && sudo mkdir ${{ env.GITHUB_RUN_NUMBER }}'
+          ssh -o StrictHostKeyChecking=no $SSH_USER@$SERVER_IP 'cd /var/www && sudo mkdir ${{ github.run_number }}'
+          pwd
+          ls -la
