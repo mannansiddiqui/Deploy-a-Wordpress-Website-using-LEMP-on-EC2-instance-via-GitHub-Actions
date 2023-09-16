@@ -25,13 +25,13 @@ jobs:
       - name: Set up SSH
         run: |
           mkdir -p ~/.ssh
-          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
 
       - name: Deploy to VPS
         run: |
           cat ~/.ssh/id_rsa
-          echo $SSH_USER
-          echo $SERVER_IP
+          echo ${{ env.SSH_USER }}
+          echo ${{ env.SERVER_IP }}
           echo ${{ env.GITHUB_RUN_NUMBER }}
-          ssh -o StrictHostKeyChecking=no $SSH_USER@$SERVER_IP 'cd /var/www && sudo mkdir ${{ env.GITHUB_RUN_NUMBER }}'
+          ssh -o StrictHostKeyChecking=no ${{ env.SSH_USER }}@${{ env.SERVER_IP }} 'cd /var/www && sudo mkdir ${{ env.GITHUB_RUN_NUMBER }}'
