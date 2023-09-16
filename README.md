@@ -2,13 +2,13 @@
 
 #### Description:
 
-• Provision a Virtual Private Server (VPS) on AWS to host the WordPress website.
-• Configure the VPS with a secure Linux distribution i.e. Ubuntu 22.04 and ensure that all necessary firewall rules are applied.
-• Install and configure Nginx as the web server, MySQL as the database, and PHP for processing dynamic content.
-• Set up a WordPress website on the VPS and secure it following best practices (e.g., strong passwords, limited user privileges, etc.).
-• Implement SSL/TLS certificate using Let's Encrypt for secure communication between the server and clients.
-• Optimize the Nginx server configuration to enhance website performance (e.g., caching, gzip compression, etc.).
-• Set up a GitHub Actions workflow for the automated deployment of the WordPress website to the VPS.
+- Provision a Virtual Private Server (VPS) on AWS to host the WordPress website.
+- Configure the VPS with a secure Linux distribution i.e. Ubuntu 22.04 and ensure that all necessary firewall rules are applied.
+- Install and configure Nginx as the web server, MySQL as the database, and PHP for processing dynamic content.
+- Set up a WordPress website on the VPS and secure it following best practices (e.g., strong passwords, limited user privileges, etc.).
+- Implement SSL/TLS certificate using Let's Encrypt for secure communication between the server and clients.
+- Optimize the Nginx server configuration to enhance website performance (e.g., caching, gzip compression, etc.).
+- Set up a GitHub Actions workflow for the automated deployment of the WordPress website to the VPS.
 
 
 #### Step-1: Provision a Virtual Private Server (VPS) on AWS to host the WordPress website.
