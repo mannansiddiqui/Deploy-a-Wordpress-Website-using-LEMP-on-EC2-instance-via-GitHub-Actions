@@ -6,8 +6,8 @@ on:
       - main
 
 env:
-  SSH_USER: ${{ var.SSH_USER }}
-  SERVER_IP: ${{ var.SERVER_IP }}
+  SSH_USER: ${{ vars.SSH_USER }}
+  SERVER_IP: ${{ vars.SERVER_IP }}
 
 jobs:
   deploy:
